@@ -1,4 +1,4 @@
-setwd("D:/Projects/r/knu-pzod/Lab4")
+setwd("C:/Users/User/Desktop/FIT/PZOD/Lab4")
 
 # Data preparation.
 
@@ -30,3 +30,7 @@ colnames(X) <- c(features$V2, "subject", "activity")
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 X_by_subject_activity <- aggregate(. ~ subject + activity, X, mean)
+
+save(X_by_subject_activity, file = "result.RData")
+
+
